@@ -6,7 +6,7 @@ module.exports = {
    */
   dest:'docs',
   base:'/documentacion-scharp/',
-  title: 'Documentacion C# Y .NET CORE',
+  title: 'Documentacion Rapida',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -24,12 +24,6 @@ module.exports = {
     ['link', { rel: 'shortcut icon', type: "image/x-icon", href:`/favicon.ico` }]
   ],
 
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
-  
   themeConfig: {
     repo: '',
     editLinks: false,
@@ -37,6 +31,14 @@ module.exports = {
     editLinkText: '',
     lastUpdated: false,
     nav: [
+      {
+        text: 'RoadMap Node JS', 
+        link: '/nodejs/'
+      },
+      {
+        text: 'RoadMap Python', 
+        link: '/python/'
+      },
       {
         text: 'C-Sharp',
         link: '/guide/',
@@ -70,12 +72,44 @@ module.exports = {
             ]
         }
       ],
-    },
+    '/nodejs/':[
+      {
+        title:'General',
+        collapsable: false
+      },
+      {
+        title:'JavaScript',
+        collapsable: true,
+        children: [
+          '/nodejs/javascript/',
+          '/nodejs/javascript/modules',
+        ]
+      },
+      {
+        title:'NPM',
+        collapsable: true
+      },
+      {
+        title:'Express',
+        collapsable: true
+      },
+      {
+        title:'MySQL',
+        collapsable: true
+      },      
+      {
+        title:'PostgreSQL',
+        collapsable: true
+      }
+    ],
+    '/python/':[
+      {
+        title:'General',
+        collapsable: false
+      }
+    ],
+    }
   },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',

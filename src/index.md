@@ -5,7 +5,13 @@ tagline:
 actionText: Documentacion !
 actionLink: /guide/
 features:
-- title: Parte 1
-  details: Primera parte de la documentacion
+- title: Node JS
+  details: RoadMap NodeJS
+- title: API
+  details: RoadMap API
+- title: React JS
+  details: RoadMap React JS
 footer: S. S.
 ---
+
+
