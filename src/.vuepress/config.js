@@ -5,7 +5,7 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
   dest:'docs',
-  base:'/documentacion-scharp/',
+  base:'/documentacion/',
   title: 'Documentacion Rapida',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
