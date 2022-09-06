@@ -62,6 +62,7 @@ module.exports = {
             'InyeccionDependecy',
             'exception',
             'tips',
+            'visualstudio',
           ]
         },
         {
