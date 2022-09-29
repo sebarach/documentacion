@@ -13,5 +13,3 @@ features:
   details: RoadMap React JS
 footer: S. S.
 ---
-
-

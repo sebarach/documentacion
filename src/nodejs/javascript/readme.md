@@ -29,14 +29,43 @@ console.log(result); // Mayor de edad
 
 -  **Destructuring**
 
+1- Objetos
+
 ```javascript
 const persona = {
-  nombre:'seba',
-  edad : 31
+    nombre:"sebastian",
+    edad:35,
+    titulos:{
+        Profesion:"Ingeniero",
+        Bobby:"Devops"
+    }
 }
-const {nombre} = persona;
-console.log(nombre);//seba
+
+const ImprimirPersona = ({nombre,edad,rango='Ing',titulos:{Profesion,Bobby}}) =>{
+console.log(nombre,edad,rango,Profesion,Bobby);
+}
+
 ```
+
+2- Arreglos
+
+```javascript
+const cervezas = ['escudo','cristal','heienken'];
+const [,c2] = cervezas;
+console.log(c2)//cristal, con una coma le indico que la posision 1 no la quiero y me traiga la 2
+
+
+const arreglos = () => [123,'asd']
+
+const arr = arreglos(); 
+console.log(arr)//[ 123, 'asd' ]1
+
+const [numeros,letras] = arreglos();// se destructura por posision del arreglo
+console.log(numeros,letras)//123 asd
+
+
+```
+
 
 
 -  **spread operator**
@@ -69,4 +98,93 @@ let b = 10;
 
 console.log(`${nombre} ${apellido}`); // Sebastian Sepulveda
 console.log(`Suma de a y b es  : ${a+b}`); // 25
+```
+
+
+
+-  **Import y Export y funciones comunes de arreglo**
+```javascript
+//Suponiendo que este arreglo esta en otro archivo
+ const heroes = [
+    {
+        id: 1,
+        name: 'Batman',
+        owner: 'DC'
+    },
+    {
+        id: 2,
+        name: 'Spiderman',
+        owner: 'Marvel'
+    },
+    {
+        id: 3,
+        name: 'Superman',
+        owner: 'DC'
+    },
+    {
+        id: 4,
+        name: 'Flash',
+        owner: 'DC'
+    },
+    {
+        id: 5,
+        name: 'Wolverine',
+        owner: 'Marvel'
+    },
+];
+
+export const marcas = ['Marvel','DC'];
+
+export default heroes; // si se quiere exportar otra variable, en el archivo que la recibe se debe destructurar
+
+
+
+import heroes,{marcas} from  '../heroes' //ruta del archivo , puede ser con extension .js opcional
+
+// find recibe una funcion como argumento (callback)
+const obtenerHeroePorId = (id)=>{
+  return heroes.find((heroes) => heroes.id === id ); 
+console.log(obtenerHeroePorId(1));// { id: 1, name: 'Batman', owner: 'DC' }
+}
+
+// filter trae en un arreglo todo lo que se cumpla en el predicado
+const obtenerHeroesPorDueno = (dueno) => heroes.filter((heroes) => heroes.owner === dueno);
+console.log(obtenerHeroesPorDueno('Marvel'));// [{ id: 2, name: 'Spiderman', owner: 'Marvel' }, { id: 5, name: 'Wolverine', owner: 'Marvel' }]
+
+```
+
+
+-  **Fetch**
+```javascript
+
+// pequen app para mostrar un gif en el html basico
+
+const API_KEY = 'hQQNQmsoqDdvATqAs5A8G9D7hiS5YVnI';
+const respuesta = fetch(`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`);
+
+respuesta
+        .then(resp=> resp.json())
+        .then(({data}) => {
+            const url  = data.images.original.url
+            const imagen = document.createElement('img');
+            imagen.src = url;
+
+            document.body.appendChild(imagen);
+
+        })
+        .catch(console.warn);
+```
+
+-  **Async y await**
+```javascript
+
+// el await espera que se resuelva la promesa ysigue con su ejucion
+
+const getImage = async() =>{
+    const API_KEY = 'hQQNQmsoqDdvATqAs5A8G9D7hiS5YVnI';
+    const respuesta = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`);
+    const {data} = await respuesta.json();
+    return data;
+};
+
 ```

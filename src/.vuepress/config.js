@@ -32,24 +32,20 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'RoadMap Node JS', 
+        text: 'React JS', 
+        link: '/react/'
+      },
+      {
+        text: 'Node JS', 
         link: '/nodejs/'
       },
       {
-        text: 'RoadMap Python', 
+        text: 'Python', 
         link: '/python/'
       },
       {
         text: 'C-Sharp',
         link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress', 
-        link: 'https://v1.vuepress.vuejs.org'
       }
     ],
     sidebar: {
@@ -104,6 +100,12 @@ module.exports = {
       }
     ],
     '/python/':[
+      {
+        title:'General',
+        collapsable: false
+      }
+    ],
+    '/react/':[
       {
         title:'General',
         collapsable: false
