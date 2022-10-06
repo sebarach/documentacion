@@ -79,7 +79,6 @@ module.exports = {
         collapsable: true,
         children: [
           '/nodejs/javascript/',
-          '/nodejs/javascript/modules',
         ]
       },
       {
@@ -107,10 +106,13 @@ module.exports = {
     ],
     '/react/':[
       {
-        title:'General',
-        collapsable: false
+        title: 'General',
+        collapsable: false,
+        children: [
+          'conceptos',
+        ]
       }
-    ],
+    ]
     }
   },
   plugins: [
