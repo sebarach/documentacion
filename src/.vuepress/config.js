@@ -32,6 +32,10 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
+        text: 'Diplomado Devops', 
+        link: '/devops/'
+      },
+      {
         text: 'React JS', 
         link: '/react/'
       },
@@ -67,7 +71,15 @@ module.exports = {
             children: [
               '/guide/mvc/',
             ]
-        }
+        },
+        {
+          title:'NET 6',
+          collapsable:true,
+          children: [
+            '/guide/APINET6/',
+            '/guide/APINET6/paso',
+          ]
+        },
       ],
     '/nodejs/':[
       {
@@ -110,6 +122,19 @@ module.exports = {
         collapsable: false,
         children: [
           'conceptos',
+        ]
+      }
+    ],
+    '/devops/':[
+      {
+        title: 'General',
+        collapsable: false,
+      },
+      {
+        title: 'Modulo 1',
+        collapsable: true,
+        children: [
+          '/devops/modulo1/',
         ]
       }
     ]
