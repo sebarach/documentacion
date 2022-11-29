@@ -4,13 +4,27 @@
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
 
-html, body
-  padding 0
-  margin 0
-  background-color #23395b
+html
+  height 100%
+  border-style none!important
+
+ body
+  background rgb(7,43,51);
+  background linear-gradient(238deg, rgba(7,43,51,1) 0%, rgba(13,13,60,1) 35%, rgba(7,43,51,1) 100%)!important
+  background-position center
+  background-repeat no-repeat
+  min-height 100%
+  max-width 100%
+  border-style none!important
 
 .home .hero img
   max-width 450px!important
+  border-radius 100px!important
+
+th,td,tr
+ border 0px !important
+ background-color inherit!important
+ color green!important
 
 .navbar
   position fixed
@@ -19,23 +33,76 @@ html, body
   left 0
   right 0
   height $navbarHeight
-  background-color #23395b
+  background-color #239B56!important
   box-sizing border-box
   border-bottom 1px solid $borderColor
 
+.nav-links,.router-link-active
+  color: #c9d1d9 !important
+
+
 .links
-  background-color #23395b!important
+  background inherit
 
 .sidebar
-  background-color #82A6B1!important
+  background #0d1117!important
+  border-style none!important
+  border-right 1px solid #30363d!important 
+  border-top 1px solid #30363d!important 
+  
+#app > div.theme-container > aside > ul > li > section > p
+ color #c9d1d9!important
+  
+.theme-container no-sidebar
+  background rgb(7,43,51)!important
+  background linear-gradient(to bottom,0deg, rgba(30,19,48,1) 0%)!important
 
-tr
-  background-color #82A6B1!important
+.navbar .links
+  background inherit!important
 
-h1, h2, h3, h4, h5, h6
-  font-weight: 600
-  line-height: 1.25
-  color: white!important
+.theme-container
+  background inherit
 
-a,p,.footer,.site-name
-  color: white!important
+#app > div.theme-container > aside > ul > li > section > ul > li > a
+  color white!important
+
+.theme-default-content h1,h2,h3
+ text-align center
+
+
+.navbar
+  background inherit!important
+  background-color #161b22!important
+
+header
+  position sticky
+  top 0
+  border-style none!important
+  border-bottom 1px solid #30363d!important 
+
+.nav-links
+  background inherit
+
+.links
+  background inherit
+
+
+.site-name
+  color #c9d1d9!important
+
+p
+  color #c9d1d9!important
+
+.sidebar-link
+  color black!important
+
+h1,h2,h3,h4,h5,h6
+  color #c9d1d9!important
+ul li
+  color #c9d1d9!important
+
+footer
+  background inherit
+
+table
+  background-color inherit

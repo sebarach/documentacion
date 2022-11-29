@@ -1,8 +1,8 @@
 {
-  "name": "documentacion-csharp",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "seba",
+  "version": "seba",
+  "description": "seba",
+  "main": "asd",
   "authors": {
     "name": "",
     "email": ""
@@ -15,5 +15,6 @@
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.5.3"
-  }
+  },
+  "author": "Sebastian <sebastian.sc1990@gmail.com>"
 }

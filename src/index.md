@@ -1,11 +1,15 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: https://hotmart.s3.amazonaws.com/product_contents/d5592da9-a9a4-424f-9718-4be1332a6d84/CSharp.png
 tagline: 
-actionText: Quick Start →
+actionText: Documentacion !
 actionLink: /guide/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-footer: Made by  with ❤️
+- title: Node JS
+  details: RoadMap NodeJS
+- title: API
+  details: RoadMap API
+- title: React JS
+  details: RoadMap React JS
+footer: S. S.
 ---
