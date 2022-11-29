@@ -50,6 +50,10 @@ module.exports = {
       {
         text: 'C-Sharp',
         link: '/guide/',
+      },
+      {
+        text: 'Linux',
+        link: '/linux/',
       }
     ],
     sidebar: {
@@ -111,6 +115,12 @@ module.exports = {
       }
     ],
     '/python/':[
+      {
+        title:'General',
+        collapsable: false
+      }
+    ],
+    '/linux/':[
       {
         title:'General',
         collapsable: false
